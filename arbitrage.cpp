@@ -18,10 +18,10 @@ int main() {
     probabilityOfTeamB = 1/team_B;
     
     sumOfProbabilities = probabilityOfTeamA + probabilityOfTeamB;
-    cout << "The Summation is: " << sumOfProbabilities;
 
-    int sumIntoPercent = sumOfProbabilities * 100;
-
+    int sumIntoPercent = (sumOfProbabilities) * 100;
+    
+    cout << "The Summation is: " << sumIntoPercent;
     
     // if (sumIntoPercent < 100) {
 
