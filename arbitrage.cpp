@@ -22,12 +22,15 @@ int main() {
 
     probabilityOfTeamA = 1/oddsOnteamA;
     probabilityOfTeamB = 1/oddsOnteamB;
-    
+    cout << "Probability of Team A is: " << probabilityOfTeamA << endl;
+    cout << "Probability of Team B is: " << probabilityOfTeamB << endl;
+
     sumOfProbabilities = probabilityOfTeamA + probabilityOfTeamB;
+    cout << "Summation of Probabilities is: " << sumOfProbabilities << endl;
 
     int sumIntoPercent = (sumOfProbabilities) * 100;
     
-    cout << "The Summation is: " << sumIntoPercent;
+    cout << "The Summation is: " << sumIntoPercent << endl;
     
     if (sumIntoPercent < 100) {
         int stakeAmount;
@@ -47,10 +50,12 @@ int main() {
     else {
         cout << "This match has no arbitrage opportunity!!";
     }
+    
+    cout << endl;
 
     // Output the final profits
-    cout << "If Team A wins, the profit is: " << profitForTeamA;
-    cout << "If Team B wins, the profit is: " << profitForTeamB;
+    cout << "If Team A wins, the profit is: " << profitForTeamA << endl;
+    cout << "If Team B wins, the profit is: " << profitForTeamB << endl;
 
     return 0;
 }
