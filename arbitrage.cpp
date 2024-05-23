@@ -1,3 +1,8 @@
+/*
+Author: Judysen Jnr, III
+Date: Thursday, May 23rd 2024
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -39,6 +44,7 @@ int main() {
         cin >> stakeAmount;
 
         cout << endl;
+        cout << "STAKES" << endl;
         // Stake on Each
         stakeOnTeamA = (probabilityOfTeamB / sumOfProbabilities) * stakeAmount;
         cout << "The Stake on Team A is: " << stakeOnTeamA << endl;
@@ -46,17 +52,19 @@ int main() {
         cout << "The Stake on Team B is: " << stakeOnTeamB << endl;
 
         cout << endl;
+        cout << "PAYOUTS" << endl;
         // Payout on Each
         payoutForTeamA = (stakeOnTeamA * oddsOnteamA);
         cout << "The Payout on Team A is: " << payoutForTeamA << endl;
-        payoutForTeamB = (stakeOnTeamA * oddsOnteamB);
+        payoutForTeamB = (stakeOnTeamB * oddsOnteamB);
         cout << "The Payout on Team B is: " << payoutForTeamB << endl;
 
         // Profit on Each
-        profitForTeamA = (payoutForTeamA - stakeOnTeamA);
-        profitForTeamA = (payoutForTeamB - stakeOnTeamB);
+        profitForTeamA = (payoutForTeamA - stakeAmount);
+        profitForTeamB = (payoutForTeamB - stakeAmount);
 
         cout << endl;
+        cout << "PROFITS" << endl;
         // Output the final profits
         cout << "If Team A wins, the profit is: " << profitForTeamA << endl;
         cout << "If Team B wins, the profit is: " << profitForTeamB << endl;
