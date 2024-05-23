@@ -12,6 +12,7 @@ double payoutForTeamA;
 double payoutForTeamB;
 double profitForTeamA;
 double profitForTeamB;
+int stakeAmount;
 
 int main() {
 
@@ -32,17 +33,27 @@ int main() {
     int sumIntoPercent = (sumOfProbabilities) * 100;
     cout << "Summation of Probabilities is: " << sumOfProbabilities << ", "<< "In percentage is: "<< sumIntoPercent << endl;
 
-    
+    cout << endl;
     if (sumIntoPercent < 100) {
-        int stakeAmount;
+        cout << "How much are you staking today?: ";
+        cin >> stakeAmount;
+
+        cout << endl;
         
         // How much stake on each
         stakeOnTeamA = (probabilityOfTeamB / sumOfProbabilities) * stakeAmount;
-        stakeOnTeamB = (probabilityOfTeamA / sumOfProbabilities) * stakeAmount;
+        cout << "The stake on Team A is: " << stakeOnTeamA << endl;
 
+        stakeOnTeamB = (probabilityOfTeamA / sumOfProbabilities) * stakeAmount;
+        cout << "The stake on Team B is: " << stakeOnTeamB << endl;
+
+        cout << endl;
         // Payout Calculation
         payoutForTeamA = (stakeOnTeamA * oddsOnteamA);
+        cout << "The Payout on Team A is: " << payoutForTeamA << endl;
+
         payoutForTeamB = (stakeOnTeamA * oddsOnteamB);
+        cout << "The Payout on Team B is: " << payoutForTeamB << endl;
 
         //Profit after winning
         profitForTeamA = (payoutForTeamA - stakeOnTeamA);
