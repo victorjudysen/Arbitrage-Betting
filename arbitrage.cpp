@@ -58,17 +58,16 @@ int main() {
         //Profit after winning
         profitForTeamA = (payoutForTeamA - stakeOnTeamA);
         profitForTeamA = (payoutForTeamB - stakeOnTeamB);
+
+        cout << endl;
+        // Output the final profits
+        cout << "If Team A wins, the profit is: " << profitForTeamA << endl;
+        cout << "If Team B wins, the profit is: " << profitForTeamB << endl;
     } 
     else {
         cout << "This match has no arbitrage opportunity!!";
     }
     
-    cout << endl;
-
-    // Output the final profits
-    cout << "If Team A wins, the profit is: " << profitForTeamA << endl;
-    cout << "If Team B wins, the profit is: " << profitForTeamB << endl;
-
     return 0;
 }
 
