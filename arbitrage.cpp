@@ -27,12 +27,10 @@ int main() {
     cin >> oddsOnteamB;
 
     cout << endl;
-
     probabilityOfTeamA = 1/oddsOnteamA;
     probabilityOfTeamB = 1/oddsOnteamB;
     cout << "Probability of Team A is: " << probabilityOfTeamA << endl;
     cout << "Probability of Team B is: " << probabilityOfTeamB << endl;
-
 
     sumOfProbabilities = probabilityOfTeamA + probabilityOfTeamB;
     int sumIntoPercent = (sumOfProbabilities) * 100;
@@ -43,17 +41,17 @@ int main() {
         cout << "How much are you staking today? --> ";
         cin >> stakeAmount;
 
+        // Stake on Each
         cout << endl;
         cout << "STAKES" << endl;
-        // Stake on Each
         stakeOnTeamA = (probabilityOfTeamB / sumOfProbabilities) * stakeAmount;
         cout << "The Stake on Team A is: " << stakeOnTeamA << endl;
         stakeOnTeamB = (probabilityOfTeamA / sumOfProbabilities) * stakeAmount;
         cout << "The Stake on Team B is: " << stakeOnTeamB << endl;
 
+        // Payout on Each
         cout << endl;
         cout << "PAYOUTS" << endl;
-        // Payout on Each
         payoutForTeamA = (stakeOnTeamA * oddsOnteamA);
         cout << "The Payout on Team A is: " << payoutForTeamA << endl;
         payoutForTeamB = (stakeOnTeamB * oddsOnteamB);
@@ -63,9 +61,9 @@ int main() {
         profitForTeamA = (payoutForTeamA - stakeAmount);
         profitForTeamB = (payoutForTeamB - stakeAmount);
 
+        // Output the final profits
         cout << endl;
         cout << "PROFITS" << endl;
-        // Output the final profits
         cout << "If Team A wins, the profit is: " << profitForTeamA << endl;
         cout << "If Team B wins, the profit is: " << profitForTeamB << endl;
     } 
