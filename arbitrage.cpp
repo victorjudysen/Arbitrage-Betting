@@ -20,17 +20,18 @@ int main() {
     cout << "Enter Team B odds: ";
     cin >> oddsOnteamB;
 
+    cout << endl;
+
     probabilityOfTeamA = 1/oddsOnteamA;
     probabilityOfTeamB = 1/oddsOnteamB;
     cout << "Probability of Team A is: " << probabilityOfTeamA << endl;
     cout << "Probability of Team B is: " << probabilityOfTeamB << endl;
 
-    sumOfProbabilities = probabilityOfTeamA + probabilityOfTeamB;
-    cout << "Summation of Probabilities is: " << sumOfProbabilities << endl;
 
+    sumOfProbabilities = probabilityOfTeamA + probabilityOfTeamB;
     int sumIntoPercent = (sumOfProbabilities) * 100;
-    
-    cout << "The Summation is: " << sumIntoPercent << endl;
+    cout << "Summation of Probabilities is: " << sumOfProbabilities << ", "<< "In percentage is: "<< sumIntoPercent << endl;
+
     
     if (sumIntoPercent < 100) {
         int stakeAmount;
